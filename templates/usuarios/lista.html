@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Usuários | Acervo{% endblock %}
+{% block content %}
+<section class="page-heading"><div><p class="eyebrow">CADASTRO</p><h1>Usuários</h1></div><a class="button button-primary" href="{% url 'usuarios:novo' %}">+ Cadastrar usuário</a></section>
+<div class="table-wrap"><table><thead><tr><th>Nome</th><th>CPF</th><th>E-mail</th><th>Telefone</th><th>Endereço</th></tr></thead><tbody>
+{% for usuario in usuarios %}<tr><td class="primary-cell">{{ usuario.nome }}</td><td>{{ usuario.cpf }}</td><td>{{ usuario.email }}</td><td>{{ usuario.telefone }}</td><td>{{ usuario.endereco }}</td></tr>
+{% empty %}<tr><td colspan="5" class="empty-state">Nenhum usuário cadastrado.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

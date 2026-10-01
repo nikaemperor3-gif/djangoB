@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Grand Line | Acervo{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="{% url 'inicio' %}"><span class="brand-mark">A</span> Grand Line</a>
+        <nav aria-label="Navegação principal">
+            <a href="{% url 'inicio' %}">Visão geral</a>
+            <a href="{% url 'usuarios:lista' %}">Usuários</a>
+            <a href="{% url 'livros:lista' %}">Livros</a>
+            <a href="{% url 'emprestimos:lista' %}">Empréstimos</a>
+        </nav>
+        <a class="admin-link" href="{% url 'admin:index' %}">Administração</a>
+    </header>
+    <main class="page-shell">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="footer">GRAND LINE <span>·</span> ACERVO DE LIVROS</footer>
+</body>
+</html>

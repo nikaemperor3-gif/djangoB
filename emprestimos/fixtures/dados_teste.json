@@ -1,0 +1,54 @@
+[
+  {
+    "model": "usuarios.usuario",
+    "pk": 1,
+    "fields": {
+      "nome": "Ana Lima",
+      "cpf": "123.456.789-00",
+      "email": "ana@example.com",
+      "telefone": "(11) 99999-0000",
+      "endereco": "Rua das Flores, 10 - Centro"
+    }
+  },
+  {
+    "model": "usuarios.usuario",
+    "pk": 2,
+    "fields": {
+      "nome": "Bruno Reis",
+      "cpf": "987.654.321-00",
+      "email": "bruno@example.com",
+      "telefone": "(11) 98888-0000",
+      "endereco": "Avenida Central, 20 - Vila Nova"
+    }
+  },
+  {
+    "model": "livros.livro",
+    "pk": 1,
+    "fields": {"nome": "Introdução à Biologia", "tematica": "Ciências", "valor": "49.90"}
+  },
+  {
+    "model": "livros.livro",
+    "pk": 2,
+    "fields": {"nome": "História do Brasil", "tematica": "História", "valor": "39.90"}
+  },
+  {
+    "model": "livros.livro",
+    "pk": 3,
+    "fields": {"nome": "Matemática Essencial", "tematica": "Matemática", "valor": "54.50"}
+  },
+  {
+    "model": "emprestimos.emprestimo",
+    "pk": 1,
+    "fields": {"usuario": 1, "livro": 1, "data_emprestimo": "2026-09-20", "status": "pendente"}
+  },
+  {
+    "model": "emprestimos.emprestimo",
+    "pk": 2,
+    "fields": {"usuario": 2, "livro": 2, "data_emprestimo": "2026-09-05", "status": "devolvido"}
+  },
+  {
+    "model": "emprestimos.emprestimo",
+    "pk": 3,
+    "fields": {"usuario": 1, "livro": 3, "data_emprestimo": "2026-08-10", "status": "expirado"}
+  }
+]

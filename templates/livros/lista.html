@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Livros | Acervo{% endblock %}
+{% block content %}
+<section class="page-heading"><div><p class="eyebrow">CATÁLOGO</p><h1>Livros</h1></div><a class="button button-primary" href="{% url 'livros:novo' %}">+ Cadastrar livro</a></section>
+<div class="table-wrap"><table><thead><tr><th>Livro</th><th>Temática</th><th>Valor</th><th>Disponibilidade</th></tr></thead><tbody>
+{% for livro in livros %}<tr><td class="primary-cell">{{ livro.nome }}</td><td>{{ livro.tematica }}</td><td>R$ {{ livro.valor|floatformat:2 }}</td><td>{% if livro.disponivel %}<span class="badge badge-green">Disponível</span>{% else %}<span class="badge badge-orange">Emprestado</span>{% endif %}</td></tr>
+{% empty %}<tr><td colspan="4" class="empty-state">Nenhum livro cadastrado.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

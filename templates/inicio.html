@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Visão geral | Acervo{% endblock %}
+{% block content %}
+<section class="page-heading">
+    <div><p class="eyebrow">CONTROLE DE ACERVO</p><h1>Visão geral</h1></div>
+    <a class="button button-primary" href="{% url 'emprestimos:novo' %}">+ Registrar empréstimo</a>
+</section>
+<section class="metrics" aria-label="Resumo do acervo">
+    <article class="metric"><span>Usuários cadastrados</span><strong>{{ total_usuarios }}</strong><a href="{% url 'usuarios:lista' %}">Ver usuários →</a></article>
+    <article class="metric"><span>Livros no acervo</span><strong>{{ total_livros }}</strong><a href="{% url 'livros:lista' %}">Ver livros →</a></article>
+    <article class="metric metric-green"><span>Livros disponíveis</span><strong>{{ livros_disponiveis }}</strong><a href="{% url 'livros:lista' %}">Consultar acervo →</a></article>
+    <article class="metric metric-orange"><span>Empréstimos pendentes</span><strong>{{ emprestimos_pendentes }}</strong><a href="{% url 'emprestimos:lista' %}">Ver empréstimos →</a></article>
+</section>
+<section class="section-block">
+    <div class="section-heading"><div><p class="eyebrow">MOVIMENTAÇÃO</p><h2>Empréstimos recentes</h2></div><a class="text-link" href="{% url 'emprestimos:lista' %}">Ver todos →</a></div>
+    {% include 'emprestimos/tabela.html' with emprestimos=emprestimos_recentes %}
+</section>
+{% endblock %}

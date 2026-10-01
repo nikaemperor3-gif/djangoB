@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block title %}Empréstimos | Acervo{% endblock %}
+{% block content %}
+<section class="page-heading"><div><p class="eyebrow">CIRCULAÇÃO</p><h1>Empréstimos</h1></div><a class="button button-primary" href="{% url 'emprestimos:novo' %}">+ Registrar empréstimo</a></section>
+{% include 'emprestimos/tabela.html' with emprestimos=emprestimos %}
+{% endblock %}

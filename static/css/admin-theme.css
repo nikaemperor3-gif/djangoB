@@ -1,0 +1,23 @@
+:root {
+    --primary: #122c40;
+    --secondary: #244a60;
+    --accent: #c33b32;
+    --primary-fg: #fffdf6;
+    --header-color: #fffdf6;
+    --header-branding-color: #fffdf6;
+    --header-bg: #122c40;
+    --link-fg: #a8322b;
+    --link-hover-color: #122c40;
+    --button-bg: #c33b32;
+    --button-hover-bg: #a82e29;
+}
+
+body { background: #f3e8cb; color: #192631; }
+#header { border-bottom: 4px solid #d5a43d; }
+#branding h1 { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 23px; font-weight: 700; text-transform: uppercase; }
+#user-tools { color: #f3e8cb; }
+.breadcrumbs { background: #244a60; }
+.module h2, .module caption, .inline-group h2 { background: #244a60; }
+.module, .dashboard #content { border-radius: 3px; }
+.button, input[type=submit], input[type=button], .submit-row input, a.button { border-radius: 3px; font-weight: 700; }
+.selector-chosen h2 { background: #244a60 !important; }
